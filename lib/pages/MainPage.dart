@@ -13,19 +13,43 @@ class _MainState extends State<MainPage> {
     return Center(
       child: Column(
         children: [
-          Text("***님, 어서오세요"),
+          Text("***님, 어서오세요"), // username displayed
           Card(
-            child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-              Icon(
-                Icons.trending_up,
-                color: Colors.white,
-              ),
-              Text(
-                "인기 있는 포스트",
-                style: TextStyle(fontSize: 24),
-              )
-            ]),
-          )
+            child: Column(
+              children: [
+                Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                  Icon(
+                    Icons.trending_up,
+                    color: Colors.white,
+                  ),
+                  Text(
+                    "인기 있는 포스트",
+                    style: TextStyle(fontSize: 24),
+                  ),
+                ]),
+                Text(
+                    "에타처럼 제목, 날짜, 글쓴이? 칼럼 들어가고 추천 많이 받은 포스트 5개 정도\n 포스트 누르면 해당 포스트로 이동"),
+              ],
+            ),
+          ),
+          Card(
+            child: Column(
+              children: [
+                Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                  Icon(
+                    Icons.equalizer,
+                    color: Colors.white,
+                  ),
+                  Text(
+                    "** 랭킹",
+                    style: TextStyle(fontSize: 24),
+                  ),
+                ]),
+                Text(
+                    "랜덤 카테고리 (학부, 학번, 성별 등) 랭킹 나오고\n 맨 아래는 카테고리속 자신의 랭킹 하이라이트해서 보여주기"),
+              ],
+            ),
+          ),
         ],
       ),
     );

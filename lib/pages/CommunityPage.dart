@@ -12,7 +12,7 @@ class _CommunityPageState extends State<CommunityPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Text("게시판"),
+        child: Text("리스트뷰 이용해서 예전에 게시판 만들었던것처럼 하기\n 카테고리 별로 보는 기능 추가"),
       ),
     );
   }
