@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:strong_handong_flutter/Home.dart';
+import 'package:strong_handong_flutter/pages/LoginPage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
       ),
       themeMode: ThemeMode.dark,
       debugShowCheckedModeBanner: false,
-      home: const Home(),
+      home: const LoginPage(),
     );
   }
 }
