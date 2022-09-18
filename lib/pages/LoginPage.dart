@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:strong_handong_flutter/Home.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -25,13 +26,22 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: TextButton(
-          child: Text("Google Login"),
-          onPressed: signInWithGoogle,
-        ),
-      ),
+    return StreamBuilder(
+      stream: FirebaseAuth.instance.authStateChanges(),
+      builder: (context, AsyncSnapshot<User?> user) {
+        if (user.hasData) {
+          return const Home();
+        } else {
+          return Scaffold(
+            body: Center(
+              child: TextButton(
+                child: Text("Google Login"),
+                onPressed: signInWithGoogle,
+              ),
+            ),
+          );
+        }
+      },
     );
   }
 }
