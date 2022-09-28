@@ -28,7 +28,7 @@ class _MainState extends State<Home> {
       body: SafeArea(
           child: PageView(
         controller: _pageController,
-        children: <Widget>[
+        children: const <Widget>[
           MainPage(),
           CommunityPage(),
           RankingPage(),

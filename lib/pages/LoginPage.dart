@@ -35,7 +35,7 @@ class LoginPage extends StatelessWidget {
           return Scaffold(
             body: Center(
               child: TextButton(
-                child: Text("Google Login"),
+                child: const Text("Google Login"),
                 onPressed: signInWithGoogle,
               ),
             ),
